@@ -27,7 +27,9 @@
 		                        <label class="custom-control-label" for="customCheck">Remember Me</label>
 		                      </div>
 		                    </div>
-		                    <button type="button" class="btn btn-primary btn-block">Login</button>
+		                    <div class="form-group">
+		                    	<button type="submit" class="btn btn-success btn-block">Login</button>
+		                    </div>
 		                  </form>
 		                  <hr>
 		                  <div class="text-center">
@@ -62,10 +64,9 @@
 		},
 		methods: {
 			login(){
-				alert("Ok");
 				axios.post('/api/auth/login',this.form)
 				.then(res=>console.log(res))
-				.catch(error => console.log(error.response.data))
+				.catch(console.log("ok"))
 			}
 		}
 	}

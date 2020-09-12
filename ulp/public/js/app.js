@@ -1959,6 +1959,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1970,12 +1972,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     login: function login() {
-      alert("Ok");
       axios.post('/api/auth/login', this.form).then(function (res) {
         return console.log(res);
-      })["catch"](function (error) {
-        return console.log(error.response.data);
-      });
+      })["catch"](console.log("ok"));
     }
   }
 });
@@ -37715,20 +37714,13 @@ var render = function() {
                       _vm._v(" "),
                       _vm._m(1),
                       _vm._v(" "),
-                      _c(
-                        "button",
-                        {
-                          staticClass: "btn btn-primary btn-block",
-                          attrs: { type: "button" }
-                        },
-                        [_vm._v("Login")]
-                      )
+                      _vm._m(2)
                     ]
                   ),
                   _vm._v(" "),
                   _c("hr"),
                   _vm._v(" "),
-                  _vm._m(2),
+                  _vm._m(3),
                   _vm._v(" "),
                   _c(
                     "div",
@@ -37780,6 +37772,18 @@ var staticRenderFns = [
           [_vm._v("Remember Me")]
         )
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form-group" }, [
+      _c(
+        "button",
+        { staticClass: "btn btn-success btn-block", attrs: { type: "submit" } },
+        [_vm._v("Login")]
+      )
     ])
   },
   function() {
