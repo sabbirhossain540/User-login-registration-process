@@ -8,6 +8,10 @@ Vue.use(VueRouter)
 //Route Import
 import {routes} from './routes'
 
+//Import Calss
+import User from './Helpers/User'
+window.User = User
+
 const router = new VueRouter({
 	routes,
 	mode : 'history'
